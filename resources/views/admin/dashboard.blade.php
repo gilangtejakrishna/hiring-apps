@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+@extends('layouts.admin')
+
+@section('content')
     <div class="min-h-screen flex items-center justify-center">
         <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
             <h1 class="text-3xl font-bold text-center mb-6">Selamat Datang di Dashboard Admin</h1>
             <p class="text-center text-gray-600 mb-6">Ini adalah halaman dashboard tempat admin bisa mengelola pekerjaan dan pelamar.</p>
 
             <div class="flex justify-center">
-                <a href="#" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800">Kelola Pekerjaan</a>
+                <a href="{{ route('admin.pekerjaan.index') }}" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800">Kelola Pekerjaan</a>
                 <a href="#" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 ml-4">Kelola Pelamar</a>
             </div>
 
@@ -25,5 +19,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+@endsection
